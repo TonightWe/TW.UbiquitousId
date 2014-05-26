@@ -9,8 +9,8 @@
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <tags>TypedId Id Guid UUID Strongly Typed Identifier StronglyTypedId</tags>
-    <projectUrl>https://github.com/TonightWe/TypedId</projectUrl>
+    <tags>UbiquitousId Id Ids Identifier Identifiers Guid UUID IntegerId CustomId CustomIdentifier CustomizedIdentifiers</tags>
+    <projectUrl>https://github.com/TonightWe/UbiquitousId</projectUrl>
   </metadata>
   <files />
 </package>
