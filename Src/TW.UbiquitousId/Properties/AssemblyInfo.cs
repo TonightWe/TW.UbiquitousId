@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("UbiquitousId")]
-[assembly: AssemblyDescription("A library for .Net that makes creating and working with custom identifiers easy! Stop relying on ambiguous Guid's/Integers for your Id's and start using something ubiquitous like IId<YourType>")]
+[assembly: AssemblyDescription("A library for .Net that makes creating and working with custom identifiers easy! Stop relying on ambiguous Guid's/Integers for your Id's and start using something ubiquitous like IId&lt;YourType&gt;")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("TonightWe")]
 [assembly: AssemblyProduct("UbiquitousId")]
