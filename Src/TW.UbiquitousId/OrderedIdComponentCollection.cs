@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TW.TypedId
+namespace TW.UbiquitousId
 {
     public class OrderedIdComponentEnumerable : IEnumerable<IIdComponent>
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TW.TypedId
+namespace TW.UbiquitousId
 {
     public class GuidIdComponent : IIdComponent<Guid>
     {
@@ -28,6 +28,23 @@ namespace TW.TypedId
         #region Properties
 
         public Guid Value { get; private set; }
+
+        #endregion
+
+        #region Methods
+
+        public bool Equals(IIdComponent other)
+        {
+            if (!GetType().Equals(other.GetType()))
+            {
+                return false;
+            }
+            if (ToString() != other.ToString())
+            {
+                return false;
+            }
+            return true;
+        }
 
         #endregion
 

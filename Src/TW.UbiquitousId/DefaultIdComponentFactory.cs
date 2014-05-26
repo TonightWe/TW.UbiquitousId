@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TW.TypedId
+namespace TW.UbiquitousId
 {
     public class DefaultIdComponentFactory : IIdComponentFactory
     {

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TypedId")]
-[assembly: AssemblyDescription("A library for .Net that makes creating strongly typed identifiers simple")]
+[assembly: AssemblyTitle("UbiquitousId")]
+[assembly: AssemblyDescription("A library for .Net that makes creating and working with custom identifiers easy! Stop relying on ambiguous Guid's/Integers for your Id's and start using something ubiquitous like IId<YourType>")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("TonightWe")]
-[assembly: AssemblyProduct("TypedId")]
+[assembly: AssemblyProduct("UbiquitousId")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

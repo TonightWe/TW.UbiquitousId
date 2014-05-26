@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TW.TypedId
+namespace TW.UbiquitousId
 {
     /// <summary>
     /// Represents a component of a <see cref="IId{T}"/>
@@ -14,7 +14,7 @@ namespace TW.TypedId
         #endregion
     }
 
-    public interface IIdComponent
+    public interface IIdComponent : IEquatable<IIdComponent>
     {
         #region Methods
 

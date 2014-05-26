@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TW.TypedId
+namespace TW.UbiquitousId
 {
     public interface IIdComponentFactory
     {

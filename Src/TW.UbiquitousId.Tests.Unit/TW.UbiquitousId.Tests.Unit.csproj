@@ -6,8 +6,8 @@
     <ProjectGuid>{1779C5A0-51B2-4623-B5C3-99B47469820A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TW.TypedId.Tests.Unit</RootNamespace>
-    <AssemblyName>TW.TypedId.Tests.Unit</AssemblyName>
+    <RootNamespace>TW.UbiquitousId.Tests.Unit</RootNamespace>
+    <AssemblyName>TW.UbiquitousId.Tests.Unit</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -66,20 +66,20 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="IdComponents\EnumIdComponentTests.cs" />
+    <Compile Include="IdComponents\GuidIdComponentTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TW.TypedId\TW.TypedId.csproj">
+    <ProjectReference Include="..\TW.UbiquitousId\TW.UbiquitousId.csproj">
       <Project>{eed8d0dc-490f-49c1-8de7-b9f5a8baab5c}</Project>
-      <Name>TW.TypedId</Name>
+      <Name>TW.UbiquitousId</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IdComponents\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

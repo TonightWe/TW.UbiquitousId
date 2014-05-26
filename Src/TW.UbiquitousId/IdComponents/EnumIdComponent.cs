@@ -1,7 +1,7 @@
 ﻿using System;
 using Seterlund.CodeGuard;
 
-namespace TW.TypedId
+namespace TW.UbiquitousId
 {
     public class EnumIdComponent<TEnum> : IIdComponent<TEnum>
     {
@@ -27,6 +27,23 @@ namespace TW.TypedId
         #region Properties
 
         public TEnum Value { get; private set; }
+
+        #endregion
+
+        #region Methods
+
+        public bool Equals(IIdComponent other)
+        {
+            if (!GetType().Equals(other.GetType()))
+            {
+                return false;
+            }
+            if (ToString() != other.ToString())
+            {
+                return false;
+            }
+            return true;
+        }
 
         #endregion
 

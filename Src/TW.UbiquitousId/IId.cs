@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TW.TypedId
+namespace TW.UbiquitousId
 {
     public class Id<T> : IId<T>
     {

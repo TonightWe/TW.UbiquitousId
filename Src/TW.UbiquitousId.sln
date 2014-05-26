@@ -10,9 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FD97FF
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.TypedId", "TW.TypedId\TW.TypedId.csproj", "{EED8D0DC-490F-49C1-8DE7-B9F5A8BAAB5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.UbiquitousId", "TW.UbiquitousId\TW.UbiquitousId.csproj", "{EED8D0DC-490F-49C1-8DE7-B9F5A8BAAB5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.TypedId.Tests.Unit", "TW.TypedId.Tests.Unit\TW.TypedId.Tests.Unit.csproj", "{1779C5A0-51B2-4623-B5C3-99B47469820A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.UbiquitousId.Tests.Unit", "TW.UbiquitousId.Tests.Unit\TW.UbiquitousId.Tests.Unit.csproj", "{1779C5A0-51B2-4623-B5C3-99B47469820A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
