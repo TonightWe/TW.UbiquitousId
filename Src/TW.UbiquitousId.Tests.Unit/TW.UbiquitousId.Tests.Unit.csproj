@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FakeItEasy">
+      <HintPath>..\packages\FakeItEasy.1.20.0\lib\net40\FakeItEasy.dll</HintPath>
+    </Reference>
     <Reference Include="FluentAssertions">
       <HintPath>..\packages\FluentAssertions.3.0.107\lib\net45\FluentAssertions.dll</HintPath>
       <Private>True</Private>
@@ -66,8 +69,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="IdComponents\EnumIdComponentTests.cs" />
-    <Compile Include="IdComponents\GuidIdComponentTests.cs" />
+    <Compile Include="IdTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

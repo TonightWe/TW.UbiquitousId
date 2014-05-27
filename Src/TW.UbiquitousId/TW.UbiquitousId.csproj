@@ -44,19 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultIdComponentFactory.cs" />
-    <Compile Include="IdComponents\EnumIdComponent.cs" />
-    <Compile Include="IdComponents\GuidIdComponent.cs" />
+    <Compile Include="DefaultIdComponentConverterContainer.cs" />
+    <Compile Include="IIdSchema.cs" />
     <Compile Include="IId.cs" />
-    <Compile Include="IdComponents\IIdComponent.cs" />
-    <Compile Include="IIdComponentFactory.cs" />
-    <Compile Include="OrderedIdComponentCollection.cs" />
+    <Compile Include="IIdComponentConverterContainer.cs" />
+    <Compile Include="IdComponentConverters\DateTimeIdComponentConverter.cs" />
+    <Compile Include="IdComponentConverters\EnumIdComponentConverter.cs" />
+    <Compile Include="IdComponentConverters\StringIdComponentConverter.cs" />
+    <Compile Include="IdComponentConverters\GuidIdComponentConverter.cs" />
+    <Compile Include="IdComponentConverters\IIdComponentConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="TW.UbiquitousId.nuspec" />
+    <None Include="TW.UbiquitousId.nuspec">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
