@@ -59,8 +59,8 @@ public class UserId : IUserId
   
   #region Properties
   
-  public DateTime DateTimeIdComponent { get { return _id.Components.First(); } }
-  public Guid GuidIdComponent { get { return _id.Components.Last(); } }
+  public DateTime DateTimeIdComponent { get { return _id.First(); } }
+  public Guid GuidIdComponent { get { return _id.Last(); } }
 
   #endregion
   
