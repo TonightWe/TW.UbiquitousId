@@ -23,7 +23,7 @@ public interface IUserId
   Guid GuidIdComponent {get;}
 }
 
-// keeping with the good design lets implement IUser by wrapping a TW.UbiquitousId.Id instance
+// implement IUserId and let UbiquitousId handle the heavy lifting!
 public class UserId : IUserId
 {
   #region Constructors
@@ -40,7 +40,7 @@ public class UserId : IUserId
       DateTime.Parse("2009-06-15 20:45:30Z"),// Note: in real world probably DateTime.UtcNow
       Guid.Parse("fe67da762a214fa2b356d9e5da80edfc")// Note: in real world probably Guid.NewGuid()
     };
-    _ubiquitousId = new UbiquitousId(components,_schema);
+    _id = new Id(components,_schema);
   }
   
   ///<summary>
@@ -48,7 +48,7 @@ public class UserId : IUserId
   ///</summary>
   public UserId(userIdString)
   {
-    _ubiquitousId = new UbiquitousId(userIdString,_schema);
+    _id = new Id(userIdString,_schema);
   }
   
   #endregion
@@ -58,14 +58,24 @@ public class UserId : IUserId
   // this schema specifies the first id component is a DateTime and the 
   // second id component is a Guid
   private static readonly IIdSchema _schema = new IdSchema(new List<Type>{typeof(DateTime),typeof(Guid)});
+  private IId _id
   
   #endregion
   
   #region Properties
   
-  public DateTime DateTimeIdComponent { get { return _ubiquitousId.Components.First(); } }
-  public Guid GuidIdComponent { get { return _ubiquitousId.Components.Last(); } }
+  public DateTime DateTimeIdComponent { get { return _id.Components.First(); } }
+  public Guid GuidIdComponent { get { return _id.Components.Last(); } }
 
+  #endregion
+  
+  #region Methods
+  
+  public override String ToString()
+  {
+    return _id.ToString();
+  }
+  
   #endregion
 }
 
