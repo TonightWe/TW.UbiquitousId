@@ -36,8 +36,8 @@ var components = new List<Object>
 var id = new Id<IUser>(components,schema);
 
 // access components
-var dateTime = id.Components.First();
-var guid = id.Components.Last();
+DateTime dateTime = id.Components.First();
+Guid guid = id.Components.Last();
 
 // convert to string
 var idString = id.ToString(); 
