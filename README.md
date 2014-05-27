@@ -33,14 +33,9 @@ public class UserId : IUserId
   ///</summary>
   public UserId()
   {
-    // generate component values
-    // Note: The type and order must match that specified by your schema
-    var components = new List<Object>
-    {
-      DateTime.Parse("2009-06-15 20:45:30Z"),// Note: in real world probably DateTime.UtcNow
-      Guid.Parse("fe67da762a214fa2b356d9e5da80edfc")// Note: in real world probably Guid.NewGuid()
-    };
-    _id = new Id(components,_schema);
+    // generate the components of a new Id however you want...
+    // the order in which you pass them must match that defined in the schema
+    _id = new Id(new List<Object>{DateTime.UtcNow,Guid.NewGuid()},_schema);
   }
   
   ///<summary>
