@@ -72,9 +72,10 @@ public class UserId : IUserId
 // whew.. that was alot of setup but i'd rather show you the RIGHT way than the simple way
 // now onto the good stuff
 
+
+
 // QuickStart Part 1: Creating an Id instance
 // -------------------------------------------
-
 
 // create your id
 var userId = new UserId();
@@ -87,6 +88,8 @@ Guid guidIdComponent = userId.GuidIdComponent;
 var userIdString = userId.ToString(); 
 // userIdString would equal:
 // 2009-06-15 20:45:30Z|fe67da762a214fa2b356d9e5da80edfc
+
+
 
 // Quickstart Part 2: Reconstructing an existing Id instance
 // ------------------------------------------------------------
