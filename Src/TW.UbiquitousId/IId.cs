@@ -8,7 +8,7 @@ using Seterlund.CodeGuard;
 
 namespace TW.UbiquitousId
 {
-    public class Id
+    public class Id : IId
     {
         #region Constructors
 
