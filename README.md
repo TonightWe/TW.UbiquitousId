@@ -16,7 +16,10 @@ see the [wiki](https://github.com/TonightWe/UbiquitousId/wiki) for available doc
 // ----------------
 
 // some custom type that needs an id
-public interface IUser{}
+public interface IUser
+{
+  IId<IUser> Id {get;} // yay ubiquitous id's whoooooop!!!
+}
 
 // define a schema for your id
 var schema = new IdSchema(new List<Type>{typeof(DateTime),typeof(Guid)});
