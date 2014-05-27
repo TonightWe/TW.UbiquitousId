@@ -7,23 +7,8 @@ A library for .Net that makes creating and working with custom identifiers easy!
 **Installation:**
 The easiest way to install is by using [Nuget](http://nuget.org/packages/TW.UbiquitousId/)
 
-**Introduction To Ids**
-The type you will use most frequently while working with the UbiquitousId library is the Id<T> type.
-
-To fully understand the Id<T> type, you really only need to know a few things:  
-- Each Id<T> instance consists of a schema and set of id components
-- The id components appear in the order defined in the schema
-- When an id is serialized, the id components are separated by the separator defined in the schema
-- When an id is deserialized, the id components are expected to be separated by the separator defined in the schema
-- You can create an id instance from a list of components(type and order must match schema) and a schema 
-- You can create an id string by invoking the ToString() method of an id instance
-- You can recreate an id instance from an id string
-
-Id components are serialized/deserialized with implementations of IIdComponentConverter. There are several implementations that are already implemented by default, namely: 
-- DateTimeIdComponentConverter (converts DateTime components)
-- EnumIdComponentConverter (converts Enum components)
-- GuidIdComponentConverter (converts Guid components)
-- StringIdComponentConverter (converts String components)
+**Documentation**
+see the [wiki](https://github.com/TonightWe/UbiquitousId/wiki) for available documentation
 
 **Quickstart:**
 ```C#
