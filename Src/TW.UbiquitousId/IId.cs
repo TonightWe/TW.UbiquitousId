@@ -8,12 +8,12 @@ using Seterlund.CodeGuard;
 
 namespace TW.UbiquitousId
 {
-    public class Id<T> : IId<T>
+    public class Id
     {
         #region Constructors
 
         /// <summary>
-        /// Reconstructs an existing <see cref="Id{T}" /> from <paramref name="idString" />
+        /// Reconstructs an existing <see cref="Id" /> from <paramref name="idString" />
         /// </summary>
         /// <param name="idString">The identifier string.</param>
         /// <param name="idSchema">The identifier syntax.</param>
@@ -34,9 +34,9 @@ namespace TW.UbiquitousId
         }
 
         /// <summary>
-        /// Constructs a new <see cref="Id{T}" /> from <paramref name="orderedComponents" />
+        /// Constructs a new <see cref="Id" /> from <paramref name="orderedComponents" />
         /// </summary>
-        /// <param name="orderedComponents">The ordered components of this <see cref="Id{T}"/></param>
+        /// <param name="orderedComponents">The ordered components of this <see cref="Id"/></param>
         /// <param name="idSchema">The identifier syntax.</param>
         /// <param name="idComponentConverterContainer">The value converter container.</param>
         public Id(IEnumerable<Object> orderedComponents, IIdSchema idSchema, IIdComponentConverterContainer idComponentConverterContainer = null)
@@ -121,12 +121,12 @@ namespace TW.UbiquitousId
         #endregion
     }
 
-    public interface IId<T> : IId
-    {
-        IEnumerable<Object> Components { get; }
-    }
-
     public interface IId : IEquatable<IId>
     {
+        #region Properties
+
+        IEnumerable<Object> Components { get; }
+
+        #endregion
     }
 }

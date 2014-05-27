@@ -37,7 +37,7 @@ namespace TW.UbiquitousId.Tests.Unit
                     DayOfWeek.Friday
                 };
 
-                var id = new Id<IdTests>(expectedComponents, schema);
+                var id = new Id(expectedComponents, schema);
 
                 #endregion
 
@@ -74,7 +74,7 @@ namespace TW.UbiquitousId.Tests.Unit
 
                 const string expectedIdString = "fe67da762a214fa2b356d9e5da80edfc|helloworld|2009-06-15 20:45:30Z|0";
 
-                var id = new Id<IdTests>(expectedIdString, schema);
+                var id = new Id(expectedIdString, schema);
 
                 #endregion
 
