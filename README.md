@@ -58,7 +58,7 @@ public class UserId : IUserId
   // this schema specifies the first id component is a DateTime and the 
   // second id component is a Guid
   private static readonly IIdSchema _schema = new IdSchema(new List<Type>{typeof(DateTime),typeof(Guid)});
-  private IId _id
+  private readonly IId _id;
   
   #endregion
   
