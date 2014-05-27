@@ -72,15 +72,6 @@ namespace TW.UbiquitousId
 
         #endregion
 
-        #region Properties
-
-        public IEnumerable<Object> Components
-        {
-            get { return _components; }
-        }
-
-        #endregion
-
         #region Methods
         public bool Equals(IId other)
         {
@@ -89,6 +80,16 @@ namespace TW.UbiquitousId
                 return false;
             }
             return true;
+        }
+
+        public IEnumerator<object> GetEnumerator()
+        {
+            return _components.GetEnumerator();
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
 
         #endregion
@@ -100,10 +101,10 @@ namespace TW.UbiquitousId
             var idStringBuilder = new StringBuilder();
 
             // iterate over all id components up to the last id component
-            for (var currentPosition = 0; currentPosition < Components.Count() - 1; currentPosition++)
+            for (var currentPosition = 0; currentPosition < _components.Count() - 1; currentPosition++)
             {
                 // get the id component at the current position
-                var currentIdComponent = Components.ElementAt(currentPosition);
+                var currentIdComponent = _components.ElementAt(currentPosition);
                 // get the value converter for the current idcomponent
                 var currentValueConverter = _idComponentConverterContainer.GetConverterForType(currentIdComponent.GetType());
                 // append element with trailing separator
@@ -111,7 +112,7 @@ namespace TW.UbiquitousId
             }
 
             // append last element with no trailing separator
-            var lastComponent = Components.Last();
+            var lastComponent = _components.Last();
             var lastComponentConverter = _idComponentConverterContainer.GetConverterForType(lastComponent.GetType());
             idStringBuilder.Append(lastComponentConverter.Serialize(lastComponent));
 
@@ -121,12 +122,7 @@ namespace TW.UbiquitousId
         #endregion
     }
 
-    public interface IId : IEquatable<IId>
+    public interface IId : IEnumerable<Object>, IEquatable<IId>
     {
-        #region Properties
-
-        IEnumerable<Object> Components { get; }
-
-        #endregion
     }
 }

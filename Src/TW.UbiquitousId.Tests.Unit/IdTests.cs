@@ -43,7 +43,7 @@ namespace TW.UbiquitousId.Tests.Unit
 
                 #region Act
 
-                var actualComponents = id.Components;
+                var actualComponents = id;
 
                 #endregion
 
