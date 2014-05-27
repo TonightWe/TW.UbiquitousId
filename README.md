@@ -15,44 +15,88 @@ see the [wiki](https://github.com/TonightWe/UbiquitousId/wiki) for available doc
 // Quickstart Setup
 // ----------------
 
-// some custom type that needs an id
-public interface IUser
+// create an interface for your custom id type so your code doesn't have a hard
+// dependency on UbiquitousId
+// Note: not necessary but good design
+public interface IUserId
 {
-  IId<IUser> Id {get;} // yay ubiquitous id's whoooooop!!!
+  DateTime DateTimeIdComponent {get;}
+  Guid GuidIdComponent {get;}
 }
 
-// define a schema for your id
-var schema = new IdSchema(new List<Type>{typeof(DateTime),typeof(Guid)});
-
-// QuickStart Part 1: Creating an Id<T> instance
-// ---------------------------------------------
-
-// define components for your id instance. 
-// Note: The type and order must match that defined by your schema
-var components = new List<Object>
+// .. keeping with the good design... implement your interface as a wrapper around a
+// TW.UbiquitousId.Id instance
+public class UserId : IUserId
 {
-  DateTime.Parse("2009-06-15 20:45:30Z"),
-  Guid.Parse("fe67da762a214fa2b356d9e5da80edfc")
-};
+  #region Constructors
+  
+  ///<summary>
+  /// Constructs a new <see cref="UserId" />
+  ///</summary>
+  public UserId()
+  {
+    // generate component values
+    // Note: The type and order must match that specified by your schema
+    var components = new List<Object>
+    {
+      DateTime.Parse("2009-06-15 20:45:30Z"),// Note: in real world probably DateTime.UtcNow
+      Guid.Parse("fe67da762a214fa2b356d9e5da80edfc")// Note: in real world probably Guid.NewGuid()
+    };
+    _ubiquitousId = new UbiquitousId(components,_schema);
+  }
+  
+  ///<summary>
+  /// Reconstructs an existing <see cref="UserId" />
+  ///</summary>
+  public UserId(userIdString)
+  {
+    _ubiquitousId = new UbiquitousId(userIdString,_schema);
+  }
+  
+  #endregion
+  
+  #region Fields
+  
+  // this schema specifies the first id component is a DateTime and the 
+  // second id component is a Guid
+  private static readonly IIdSchema _schema = 
+  new IdSchema(new List<Type>{typeof(DateTime),typeof(Guid)});
+  
+  #endregion
+  
+  #region Properties
+  
+  public DateTime DateTimeIdComponent { get { return _ubiquitousId.Components.First(); } }
+  public Guid GuidIdComponent { get { return _ubiquitousId.Components.Last(); } }
+
+  #endregion
+}
+
+// whew.. that was alot of setup but i'd rather show you the RIGHT way than the simple way
+// now onto the good stuff
+
+// QuickStart Part 1: Creating an Id instance
+// -------------------------------------------
+
 
 // create your id
-var id = new Id<IUser>(components,schema);
+var userId = new UserId();
 
 // access components
-DateTime dateTime = id.Components.First();
-Guid guid = id.Components.Last();
+DateTime dateTimeIdComponent = userId.DateTimeIdComponent;
+Guid guidIdComponent = userId.GuidIdComponent;
 
 // convert to string
-var idString = id.ToString(); 
-// idString would equal:
+var userIdString = userId.ToString(); 
+// userIdString would equal:
 // 2009-06-15 20:45:30Z|fe67da762a214fa2b356d9e5da80edfc
 
-// Quickstart Part 2: Reconstructing an existing Id<T> instance
+// Quickstart Part 2: Reconstructing an existing Id instance
 // ------------------------------------------------------------
 
-id = new Id<IUser>(idString,schema);
+id = new UserId(userIdString);
 
-idString = id.ToString();
+userIdString = userId.ToString();
 // again, idString would equal: 
 // 2009-06-15 20:45:30Z|fe67da762a214fa2b356d9e5da80edfc
 
