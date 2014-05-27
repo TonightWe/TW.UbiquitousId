@@ -15,8 +15,7 @@ see the [wiki](https://github.com/TonightWe/UbiquitousId/wiki) for available doc
 // Quickstart Setup
 // ----------------
 
-// create an interface for your custom id type so your code doesn't have a hard
-// dependency on UbiquitousId
+// create an interface for your custom id type so your code doesn't have a hard dependency on UbiquitousId
 // Note: not necessary but good design
 public interface IUserId
 {
@@ -24,8 +23,7 @@ public interface IUserId
   Guid GuidIdComponent {get;}
 }
 
-// .. keeping with the good design... implement your interface as a wrapper around a
-// TW.UbiquitousId.Id instance
+// keeping with the good design lets implement IUser by wrapping a TW.UbiquitousId.Id instance
 public class UserId : IUserId
 {
   #region Constructors
