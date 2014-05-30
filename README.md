@@ -35,7 +35,7 @@ public class UserId : IUserId
   {
     // generate the components of a new Id however you want...
     // the order in which you pass them must match that defined in the schema
-    _id = new Id(new List<Object>{DateTime.UtcNow,Guid.NewGuid()},_schema);
+    _id = new Id(new List<Object>{DateTime.UtcNow,Guid.NewGuid()},IdSchema);
   }
   
   ///<summary>
@@ -43,7 +43,7 @@ public class UserId : IUserId
   ///</summary>
   public UserId(userIdString)
   {
-    _id = new Id(userIdString,_schema);
+    _id = new Id(userIdString,IdSchema);
   }
   
   #endregion
@@ -52,7 +52,7 @@ public class UserId : IUserId
   
   // this schema specifies the first id component is a DateTime and the 
   // second id component is a Guid
-  private static readonly IIdSchema _schema = new IdSchema(new List<Type>{typeof(DateTime),typeof(Guid)});
+  private static readonly IIdSchema IdSchema = new IdSchema(new []{typeof(DateTime),typeof(Guid)});
   private readonly IId _id;
   
   #endregion
@@ -73,10 +73,6 @@ public class UserId : IUserId
   
   #endregion
 }
-
-// whew.. that was alot of setup but i'd rather show you the RIGHT way than the simple way
-// now onto the good stuff
-
 
 
 // QuickStart Part 1: Creating an Id instance
