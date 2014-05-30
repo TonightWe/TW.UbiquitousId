@@ -99,7 +99,7 @@ var userIdString = userId.ToString();
 // Quickstart Part 2: Reconstructing an existing Id instance
 // ------------------------------------------------------------
 
-id = new UserId(userIdString);
+userId = new UserId(userIdString);
 
 userIdString = userId.ToString();
 // again, idString would equal: 
