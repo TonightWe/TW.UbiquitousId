@@ -1,9 +1,3 @@
-UbiquitousId 
-========== 
-
-**Description:**
-A library for .Net that makes creating and working with custom identifiers easy. Stop relying on ambiguous Guid's/Integers for your Id's and start using something ubiquitous!
-
 **Installation:**
 The easiest way to install is by using [Nuget](http://nuget.org/packages/TW.UbiquitousId/).
 
