@@ -2,7 +2,7 @@ UbiquitousId
 ========== 
 
 **Continuous Integration Nuget Feed:**
-A [TonightWe continuous integration Nuget feed](https://www.myget.org/feed/Packages/tonightwe) is available.
+A [TonightWe continuous integration Nuget feed](https://www.myget.org/feed/Packages/tonightwe) is available.  
 The last build was: ![Unknown](https://www.myget.org/BuildSource/Badge/tonightwe?identifier=8e64120a-794f-4eb1-9462-be460c7901af)
 
 **Description:**
