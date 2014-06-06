@@ -2,8 +2,7 @@ UbiquitousId
 ========== 
 
 **Continuous Integration Nuget Feed:**
-A [TonightWe continuous integration Nuget feed](https://www.myget.org/feed/Packages/tonightwe) is available.  
-The last build was: ![Unknown](https://www.myget.org/BuildSource/Badge/tonightwe?identifier=8e64120a-794f-4eb1-9462-be460c7901af)
+A [TonightWe continuous integration Nuget feed](https://www.myget.org/feed/Packages/tonightwe) is available which builds and hosts all packages contained in this project. The most recent build was: ![Unknown](https://www.myget.org/BuildSource/Badge/tonightwe?identifier=8e64120a-794f-4eb1-9462-be460c7901af)
 
 **Description:**
 A library for .Net that makes creating and working with custom identifiers easy. Stop relying on ambiguous Guid's/Integers for your Id's and start using something ubiquitous!
