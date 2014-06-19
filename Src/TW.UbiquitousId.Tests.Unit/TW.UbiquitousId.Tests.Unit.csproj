@@ -69,7 +69,20 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="IdTests.cs" />
+    <Compile Include="FourteenComponentIdTests.cs" />
+    <Compile Include="ThirteenComponentIdTests.cs" />
+    <Compile Include="TwelveComponentIdTests.cs" />
+    <Compile Include="ElevenComponentIdTests.cs" />
+    <Compile Include="TenComponentIdTests.cs" />
+    <Compile Include="NineComponentIdTests.cs" />
+    <Compile Include="EightComponentIdTests.cs" />
+    <Compile Include="SevenComponentIdTests.cs" />
+    <Compile Include="SixComponentIdTests.cs" />
+    <Compile Include="FiveComponentIdTests.cs" />
+    <Compile Include="OneComponentIdTests.cs" />
+    <Compile Include="TwoComponentIdTests.cs" />
+    <Compile Include="ThreeComponentIdTests.cs" />
+    <Compile Include="FourComponentIdTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
