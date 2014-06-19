@@ -141,14 +141,17 @@ namespace TW.UbiquitousId
         #endregion
     }
 
-    public interface IId<T0> : IEnumerable<Object>
+    public interface IId<T0> : IId
     {
         #region Properties
 
         T0 Component0 { get; }
 
         #endregion
+    }
 
+    public interface IId : IEnumerable<Object>
+    {
         #region Conversion Methods
 
         String ToString();

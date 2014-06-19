@@ -9,6 +9,7 @@
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
+    <releaseNotes>Rewrote to use Generic parameters directly on the Id for schema rather than loosely typed schema class</releaseNotes>
     <tags>UbiquitousId Id Ids Identifier Identifiers Guid UUID IntegerId CustomId CustomIdentifier CustomizedIdentifiers</tags>
     <projectUrl>https://github.com/TonightWe/UbiquitousId</projectUrl>
   </metadata>
