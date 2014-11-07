@@ -68,12 +68,12 @@ namespace TW.UbiquitousId.Tests.Unit
                 var expectedIdStringBuilder = new StringBuilder();
                 expectedIdStringBuilder.Append("fe67da762a214fa2b356d9e5da80edfc");
                 expectedIdStringBuilder.Append("|helloworld");
-                expectedIdStringBuilder.Append("|2009-06-15 20:45:30Z");
+                expectedIdStringBuilder.Append("|23423423423423");
                 expectedIdStringBuilder.Append("|0");
-                expectedIdStringBuilder.Append("|0001-01-02 00:00:00Z");
+                expectedIdStringBuilder.Append("|233");
                 var expectedIdString = expectedIdStringBuilder.ToString();
 
-                var id = new Id<Guid, String, DateTime, DayOfWeek,DateTime>(expectedIdString);
+                var id = new Id<Guid, String, DateTime, DayOfWeek,int>(expectedIdString);
 
                 #endregion
 

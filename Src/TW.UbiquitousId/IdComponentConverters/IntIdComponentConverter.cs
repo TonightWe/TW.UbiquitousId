@@ -1,39 +1,37 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace TW.UbiquitousId
 {
-    public class DateTimeIdComponentConverter : IIdComponentConverter
+    public class IntIdComponentConverter :
+        IIdComponentConverter
     {
         #region Methods
-
+        
         public string Serialize(
             dynamic value)
         {
-            if (!(value is DateTime))
+            if (!(value is int))
             {
                 throw new Exception(String.Format("{0} cannot serialize {1}", GetType(), value.GetType().Name));
             }
-            // Convert to decimal ticks of represented universal time
-            // Note: we must first convert it to UTC.
-            return value.ToUniversalTime().Ticks.ToString("D");
+            return value.ToString();
         }
 
         public dynamic Deserialize(
             string valueString,
             Type valueType)
         {
-            if (!typeof(DateTime).IsAssignableFrom(valueType))
+            if (!typeof(int).IsAssignableFrom(valueType))
             {
                 throw new Exception(String.Format("{0} cannot deserialize {1}", GetType(), valueType.Name));
             }
-            return new DateTime(long.Parse(valueString),DateTimeKind.Utc);
+            return int.Parse(valueString);
         }
 
         public bool IsConverterFor(
             Type valueType)
         {
-            if (typeof(DateTime).IsAssignableFrom(valueType))
+            if (typeof(int).IsAssignableFrom(valueType))
             {
                 return true;
             }

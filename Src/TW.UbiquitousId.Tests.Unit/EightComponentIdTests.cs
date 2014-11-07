@@ -77,9 +77,9 @@ namespace TW.UbiquitousId.Tests.Unit
                 var expectedIdStringBuilder = new StringBuilder();
                 expectedIdStringBuilder.Append("fe67da762a214fa2b356d9e5da80edfc");
                 expectedIdStringBuilder.Append("|helloworld");
-                expectedIdStringBuilder.Append("|2009-06-15 20:45:30Z");
+                expectedIdStringBuilder.Append("|2342342343234");
                 expectedIdStringBuilder.Append("|0");
-                expectedIdStringBuilder.Append("|0001-01-02 00:00:00Z");
+                expectedIdStringBuilder.Append("|2342342343234");
                 expectedIdStringBuilder.Append("|a4bac0922c674c1b80016b680e31ba44");
                 expectedIdStringBuilder.Append("|3");
                 expectedIdStringBuilder.Append("|helloworldagain");

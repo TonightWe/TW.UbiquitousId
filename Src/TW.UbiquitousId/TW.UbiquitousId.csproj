@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="DefaultIdComponentConverterContainer.cs" />
     <Compile Include="IComponentSeparator.cs" />
+    <Compile Include="IdComponentConverters\LongIdComponentConverter.cs" />
+    <Compile Include="IdComponentConverters\IntIdComponentConverter.cs" />
     <Compile Include="IId.cs" />
     <Compile Include="IIdComponentConverterContainer.cs" />
     <Compile Include="IdComponentConverters\DateTimeIdComponentConverter.cs" />

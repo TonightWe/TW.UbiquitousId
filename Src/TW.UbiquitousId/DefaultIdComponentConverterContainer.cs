@@ -17,10 +17,12 @@ namespace TW.UbiquitousId
         public DefaultIdComponentConverterContainer()
         {
             ValueConverters = new ConcurrentDictionary<Type, IIdComponentConverter>();
-            ValueConverters.Add(typeof (EnumIdComponentConverter), new EnumIdComponentConverter());
-            ValueConverters.Add(typeof (GuidIdComponentConverter), new GuidIdComponentConverter());
-            ValueConverters.Add(typeof (StringIdComponentConverter), new StringIdComponentConverter());
             ValueConverters.Add(typeof(DateTimeIdComponentConverter), new DateTimeIdComponentConverter());
+            ValueConverters.Add(typeof (GuidIdComponentConverter), new GuidIdComponentConverter());
+            ValueConverters.Add(typeof(EnumIdComponentConverter), new EnumIdComponentConverter());
+            ValueConverters.Add(typeof(IntIdComponentConverter), new IntIdComponentConverter());
+            ValueConverters.Add(typeof(LongIdComponentConverter), new LongIdComponentConverter());
+            ValueConverters.Add(typeof (StringIdComponentConverter), new StringIdComponentConverter());
         }
 
         #endregion

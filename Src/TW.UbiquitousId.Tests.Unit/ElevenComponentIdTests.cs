@@ -86,18 +86,18 @@ namespace TW.UbiquitousId.Tests.Unit
                 var expectedIdStringBuilder = new StringBuilder();
                 expectedIdStringBuilder.Append("fe67da762a214fa2b356d9e5da80edfc");
                 expectedIdStringBuilder.Append("|helloworld");
-                expectedIdStringBuilder.Append("|2009-06-15 20:45:30Z");
+                expectedIdStringBuilder.Append("|29034900982390");
                 expectedIdStringBuilder.Append("|0");
-                expectedIdStringBuilder.Append("|0001-01-02 00:00:00Z");
+                expectedIdStringBuilder.Append("|234234323333");
                 expectedIdStringBuilder.Append("|a4bac0922c674c1b80016b680e31ba44");
                 expectedIdStringBuilder.Append("|3");
                 expectedIdStringBuilder.Append("|helloworldagain");
-                expectedIdStringBuilder.Append("|9999-12-31 23:59:59Z");
+                expectedIdStringBuilder.Append("|20398493");
                 expectedIdStringBuilder.Append("|1");
                 expectedIdStringBuilder.Append("|goodbyeworld");
                 var expectedIdString = expectedIdStringBuilder.ToString();
 
-                var id = new Id<Guid, String, DateTime, DayOfWeek,DateTime,Guid,DayOfWeek,String,DateTime,DateTimeKind,String>(expectedIdString);
+                var id = new Id<Guid, String, long, DayOfWeek,DateTime,Guid,DayOfWeek,String,int,DateTimeKind,String>(expectedIdString);
 
                 #endregion
 
